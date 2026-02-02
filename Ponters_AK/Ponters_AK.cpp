@@ -40,11 +40,34 @@ int main()
             ptr_max = ptr;
         }
     }
-    cout << *ptr_max;
+    cout << *ptr_max << endl;
 
 
+    char str[] = "hello world!";
+    char* ptr_s = str;
+    int length = 0;
 
+    for (; *ptr_s != '\0'; ptr_s++) {
+        length++;
+    }
+    cout << "length " << length << endl;
 
+    ptr_s--;
+    for (; ptr_s >= str; ptr_s--) {//saw online dont know how works
+        cout << *ptr_s;
+    }
+
+    vector<int> num = { 2,1,5,3,4,8,33,13,15,18 };
+    int* begin = &num[0];
+    int* end = &num[num.size() - 1];
+    while (begin < end) {
+        if (begin + 1 == end) {
+            break;
+        }
+        begin++;
+            end--;
+    }
+    cout << "mid is " << *begin;
     //int* ptr = arr;
     //int* end_ptr = arr + arr_size;
 
